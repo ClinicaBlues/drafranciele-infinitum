@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dra. Franciele Oliveira · Ortopedia e dor · Clínica Infinitum</title>
+<meta name="description" content="Ortopedista, a Dra. Franciele Oliveira cuida da dor na coluna, nos joelhos, no quadril, no ombro e nos pés. Faz cirurgia do pé e do tornozelo e procediment">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: quiet editorial page in the clinic's own materials (white marble, walnut, teal letters, gold mark). One column of intent: promise, the three doctors, the 1-minute form. Deliberately single light theme. */
+:root{
+  --bg:#FBFAF7; --surface:#FFFFFF; --sand:#F4EFE7; --line:#E7E1D7; --line-2:#D9D1C4;
+  --ink:#1D2524; --mut:#5F6765; --gold:#B8862B; --gold-2:#D9AE52; --teal:#1B5E61; --teal-h:#134B4E; --teal-soft:#E8F1F0;
+  --serif:"Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --sans:"Jost", "Avenir Next", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:500}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+.kicker{font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+/* logo */
+.brand{display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:var(--gold)}
+.brand .mk{width:58px;height:23px;fill:url(#gold)}
+.brand .wd{width:118px;height:10px;fill:var(--ink)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(251,250,247,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;font:500 16px/1.2 var(--sans);letter-spacing:.02em;text-decoration:none;border-radius:2px;padding:17px 30px;background:var(--teal);color:#fff;transition:background .2s}
+.btn:hover{background:var(--teal-h)}
+.btn.sm{padding:11px 20px;font-size:14.5px}
+.btn[disabled]{opacity:.6;cursor:wait}
+.link{font-weight:500;color:var(--teal);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:64px;align-items:center;padding-block:72px 80px}
+.hero-txt{display:flex;flex-direction:column;gap:26px;min-width:0}
+.hero h1{font-family:var(--serif);font-size:clamp(42px,5.4vw,70px);line-height:1;letter-spacing:-.01em}
+.hero h1 i{color:var(--teal)}
+.hero .sub{font-size:19px;color:var(--mut);font-weight:300;max-width:30em}
+.gift{border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding-block:16px;display:flex;flex-direction:column;gap:2px}
+.gift b{font-weight:500;font-size:17.5px}
+.gift span{font-size:15px;color:var(--mut)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.cta-row small{font-size:14px;color:var(--mut)}
+.hero-img{position:relative;min-width:0}
+.hero-img img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:62% 50%;border-radius:2px}
+.hero-img figcaption{margin-top:12px;font-size:13.5px;color:var(--mut);letter-spacing:.04em}
+
+/* doctors */
+section.block{padding-block:88px}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:40rem;margin-bottom:44px}
+.sec-head h2{font-family:var(--serif);font-size:clamp(34px,4vw,50px);line-height:1.04}
+.sec-head p{color:var(--mut);font-weight:300;font-size:18px}
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.doc{display:flex;flex-direction:column;gap:16px;min-width:0}
+.doc .ph{overflow:hidden;border-radius:2px;background:var(--sand)}
+.doc img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;transition:transform .6s ease}
+.doc:hover img{transform:scale(1.025)}
+.doc .area{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.doc h3{font-family:var(--serif);font-size:30px;line-height:1.05}
+.doc p.f{color:var(--mut);font-weight:300;font-size:16.5px}
+.doc .crm{font-size:13px;color:var(--mut);letter-spacing:.02em}
+.doc .link{align-self:flex-start;font-size:15px}
+.together{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--serif);font-style:italic;font-size:24px;color:var(--ink);max-width:44rem}
+
+/* form */
+.form-band{background:var(--sand);border-top:1px solid var(--line)}
+.form-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.form-aside{position:sticky;top:100px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.form-aside img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.incl{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;font-size:15.5px}
+.incl li{padding-left:16px;position:relative}
+.incl li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.note{font-size:14px;color:var(--mut)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:40px 36px;display:flex;flex-direction:column;gap:34px;min-width:0;box-shadow:0 30px 60px -40px rgba(40,30,15,.35)}
+.step{display:flex;flex-direction:column;gap:14px;border:0;padding:0;margin:0;min-width:0}
+.step legend,.step .lg{padding:0;display:flex;align-items:baseline;gap:12px;font-size:20px;font-weight:500;line-height:1.3;margin-bottom:2px}
+.step .num{font-family:var(--serif);font-size:22px;color:var(--gold);font-weight:600;min-width:20px}
+.step .hint{font-size:14.5px;color:var(--mut);margin-top:-6px}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--line-2);border-radius:2px;background:var(--surface);cursor:pointer;transition:border-color .15s, background .15s;position:relative}
+.choice:hover{border-color:var(--teal)}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:0 0 22px;width:22px;height:22px;border:1.5px solid var(--line-2);border-radius:2px;display:grid;place-items:center;background:#fff;transition:all .15s}
+.box svg{width:14px;height:14px;stroke:#fff;opacity:0}
+.choice .t{display:flex;flex-direction:column;gap:1px;min-width:0}
+.choice .t b{font-weight:500;font-size:17px}
+.choice .t span{font-size:14px;color:var(--mut)}
+.choice:has(input:checked){border-color:var(--teal);background:var(--teal-soft)}
+.choice:has(input:checked) .box{background:var(--teal);border-color:var(--teal)}
+.choice:has(input:checked) .box svg{opacity:1}
+.choice:has(input:focus-visible){outline:2px solid var(--teal);outline-offset:2px}
+.sub-q{display:flex;flex-direction:column;gap:10px;padding:16px 0 4px;border-top:1px dashed var(--line-2)}
+.sub-q:first-child{border-top:0;padding-top:0}
+.sub-q p{font-size:16px;font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill span{display:block;padding:10px 16px;border:1px solid var(--line-2);border-radius:999px;font-size:15px;cursor:pointer;background:#fff;transition:all .15s}
+.pill span:hover{border-color:var(--teal)}
+.pill input:checked + span{background:var(--teal);border-color:var(--teal);color:#fff}
+.pill input:focus-visible + span{outline:2px solid var(--teal);outline-offset:2px}
+.empty{font-size:15px;color:var(--mut);padding:14px 16px;background:var(--bg);border:1px dashed var(--line-2);border-radius:2px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:14px;font-weight:500;color:var(--ink)}
+.field input{font:inherit;font-size:16.5px;padding:14px 15px;border:1px solid var(--line-2);border-radius:2px;background:#fff;color:var(--ink);width:100%}
+.field input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--mut);cursor:pointer;line-height:1.5}
+.consent input{width:20px;height:20px;accent-color:var(--teal);flex:0 0 auto;margin:1px 0 0}
+.err{color:#9E3A22;font-size:15px}
+.submit{display:flex;flex-direction:column;gap:10px}
+.submit .btn{width:100%;font-size:17px;padding:19px}
+.submit small{font-size:13.5px;color:var(--mut);text-align:center}
+.done{display:flex;flex-direction:column;gap:20px}
+.done h3{font-family:var(--serif);font-size:38px;line-height:1.05}
+.done .who{display:flex;flex-direction:column;gap:12px}
+.done .who div{display:flex;gap:14px;align-items:center}
+.done .who img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.done .who b{font-weight:500;display:block}
+.done .who span{font-size:14.5px;color:var(--mut)}
+.testmode{font-size:13px;background:#FBF1DA;color:#6B5310;padding:8px 12px;border-radius:2px}
+
+footer{border-top:1px solid var(--line);background:var(--bg)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:flex-start;padding-block:44px 56px;font-size:14.5px;color:var(--mut)}
+footer .col{display:flex;flex-direction:column;gap:6px}
+footer .brand .mk{width:70px;height:28px}
+
+/* mobile sticky CTA */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:none}
+.dock .btn{width:100%}
+
+@media (max-width: 960px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:40px 56px}
+  .hero-img{order:2}
+  .form-grid{grid-template-columns:1fr;gap:32px}
+  .form-aside{position:static}
+  .form-aside img{display:none}
+  .docs{gap:24px}
+}
+@media (max-width: 720px){
+  body{font-size:16px}
+  .wrap{padding-inline:18px}
+  .top .btn{display:none}
+  .brand .mk{width:48px;height:19px}.brand .wd{width:100px;height:9px}
+  .hero .sub{font-size:17.5px}
+  .hero-img img{aspect-ratio:4/3}
+  section.block{padding-block:60px}
+  .docs{grid-template-columns:1fr;gap:36px}
+  .doc{display:grid;grid-template-columns:132px 1fr;gap:6px 18px;align-items:start}
+  .doc .ph{grid-row:span 5}
+  .doc h3{font-size:26px}
+  .together{font-size:20px}
+  .card{padding:28px 20px;gap:30px}
+  .fields,.incl{grid-template-columns:1fr}
+  .dock.on{display:block}
+  footer .wrap{padding-bottom:110px}
+}
+
+.dhero{padding-block:56px 64px}
+.dhero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.dhero h1{font-family:var(--serif);font-size:clamp(40px,5vw,64px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 18px}
+.dhero h1 i{color:var(--teal)}
+.dhero .who{font-family:var(--serif);font-size:30px;line-height:1.1;margin:0}
+.dhero .crm{font-size:14px;color:var(--mut);margin:6px 0 20px}
+.dhero .bio{font-size:18.5px;color:var(--mut);font-weight:300;max-width:34em;margin:0 0 28px}
+.dhero figure{margin:0}
+.dhero figure img{width:100%;height:auto;display:block;border-radius:2px;background:var(--sand)}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.work div{padding:26px 24px 28px 0;border-bottom:1px solid var(--line)}
+.work div:nth-child(3n+2),.work div:nth-child(3n+3){padding-left:24px;border-left:1px solid var(--line)}
+.work h3{font-family:var(--serif);font-size:25px;line-height:1.1;margin:0 0 8px}
+.work p{margin:0;color:var(--mut);font-weight:300;font-size:16px}
+.qwrap{max-width:760px;margin:0 auto}
+.qhead{text-align:center;margin-bottom:28px}
+.qhead h2{font-family:var(--serif);font-size:clamp(32px,3.6vw,46px);line-height:1.05;margin:10px 0 10px}
+.qhead p{color:var(--mut);font-weight:300;font-size:17.5px;margin:0 auto;max-width:34em}
+.prog{display:flex;align-items:center;gap:14px;font-size:13.5px;color:var(--mut);letter-spacing:.06em}
+.prog .bar{flex:1;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.prog .bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.st-title{font-family:var(--serif);font-size:30px;line-height:1.1;margin:0}
+.qq{display:flex;flex-direction:column;gap:12px}
+.qq .lbl{font-size:18px;font-weight:500;line-height:1.35}
+.qq .hint{font-size:14px;color:var(--mut);margin-top:-6px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.scale{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
+.scale .pill span{padding:10px 0;text-align:center;border-radius:2px}
+.scale-l{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut)}
+.halves{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nav{display:flex;gap:12px}
+.nav .btn{flex:1}
+.btn.ghost{background:#fff;color:var(--teal);border:1px solid var(--line-2);flex:0 0 auto}
+.btn.ghost:hover{background:var(--teal-soft)}
+.btn.wa{background:#1F7A4D}
+.btn.wa:hover{background:#196640}
+.others{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:15px}
+.fq{font-size:15px;color:var(--mut)}
+@media (max-width:860px){
+ .dhero{padding-block:28px 40px}
+ .dhero .wrap{grid-template-columns:1fr;gap:28px}
+ .dhero figure{order:-1;max-width:360px}
+ .work{grid-template-columns:1fr}
+ .work div,.work div:nth-child(3n+2),.work div:nth-child(3n+3){padding:22px 0;border-left:0}
+ .scale{grid-template-columns:repeat(6,1fr)}
+ .halves{grid-template-columns:1fr}
+}
+</style>
+<script>window.PAGE = {"slug": "drafranciele", "nome": "Dra. Franciele Oliveira", "curto": "Dra. Franciele", "aba": "Dra. Franciele Oliveira", "endpointUrl": "https://script.google.com/macros/s/AKfycbytQ0OqkShC1L7tu9yeQCJ1zh8_7WOzdGrlIPaK5gEJvsx5Mw22KT8Tgj4tfSHd9-na/exec", "writeKey": "infinitum-leads-2026", "whatsapp": "5531997436696", "autoriza": "Autorizo a Clínica Infinitum e sua equipe a usarem as informações desta pesquisa e a entrarem em contato comigo por telefone ou WhatsApp para informar sobre avaliação e tratamento da dor.", "steps": [{"t": "Sobre a sua dor", "q": [{"id": "dor", "c": "Dor persistente", "t": "Você sente alguma dor frequente ou persistente atualmente?", "type": "one", "o": ["Sim", "Não"]}, {"id": "regiao", "c": "Região", "t": "Qual região mais incomoda você?", "type": "multi", "o": ["Lombar (parte baixa das costas)", "Meio das costas", "Pescoço", "Ombro", "Joelho direito", "Joelho esquerdo", "Quadril", "Pé ou tornozelo", "Outra"]}, {"id": "tempo", "c": "Há quanto tempo", "t": "Há quanto tempo você sente essa dor?", "type": "one", "o": ["Menos de 3 meses", "De 3 a 6 meses", "De 6 meses a 1 ano", "Mais de 1 ano"]}, {"id": "eva", "c": "Intensidade (0-10)", "t": "De 0 a 10, qual a intensidade da sua dor na maior parte dos dias?", "hint": "0 = sem dor · 10 = pior dor imaginável", "type": "scale"}]}, {"t": "Como a dor aparece", "q": [{"id": "sintomas", "c": "Sintomas", "t": "Você tem algum destes sintomas?", "hint": "Marque mais de uma opção, se necessário.", "type": "multi", "o": ["Dor que desce para a perna (ciático)", "Formigamento ou dormência", "Rigidez ao acordar", "Dor ao subir ou descer escadas", "Dor ao agachar ou levantar da cadeira", "Dor ao ficar muito tempo sentado(a) ou em pé", "Inchaço ou estalos no joelho", "Dificuldade para caminhar", "Outro", "Nenhuma dessas opções"]}, {"id": "impacto", "c": "O que a dor atrapalha", "t": "A dor atrapalha alguma destas áreas da sua vida?", "type": "multi", "o": ["Trabalho", "Sono", "Tarefas de casa", "Atividade física", "Lazer e vida social", "Humor e disposição", "Não atrapalha"]}]}, {"t": "Tratamentos anteriores", "q": [{"id": "consulta", "c": "Consulta prévia", "t": "Você já passou por consulta médica por causa dessa dor?", "type": "one", "o": ["Sim, faço acompanhamento atualmente", "Sim, mas não faço acompanhamento atualmente", "Não, nunca passei"]}, {"id": "trat", "c": "Tratamentos feitos", "t": "Você já fez algum tratamento para a dor?", "type": "multi", "o": ["Medicamentos", "Fisioterapia", "Infiltração ou bloqueio", "Acupuntura", "Cirurgia", "Outro", "Nenhum"]}, {"id": "remedio", "c": "Uso de remédio para dor", "t": "Com que frequência você usa remédios para dor?", "type": "one", "o": ["Todos os dias", "Algumas vezes por semana", "Raramente", "Não uso"]}]}, {"t": "Peso e hábitos", "q": [{"id": "acima", "c": "Acima do peso", "t": "Você considera que está acima do peso?", "type": "one", "o": ["Sim", "Não", "Não sei informar"]}, {"id": "peso", "c": "Peso (kg)", "t": "Peso aproximado em kg (opcional)", "type": "number", "half": 1}, {"id": "altura", "c": "Altura (m)", "t": "Altura em metros (opcional)", "type": "number", "half": 1}, {"id": "pesodor", "c": "Peso x dor", "t": "Você sente que o peso piora a sua dor, ou que a dor dificulta perder peso?", "type": "one", "o": ["Sim", "Não", "Talvez"]}, {"id": "ativ", "c": "Atividade física", "t": "Você pratica atividade física?", "type": "one", "o": ["Sim, regularmente", "Às vezes", "Não, por causa da dor", "Não, por outros motivos"]}]}, {"t": "O seu interesse", "q": [{"id": "integrado", "c": "Interesse dor + peso", "t": "Você tem interesse em tratar a dor e cuidar do peso de forma integrada?", "type": "one", "o": ["Sim", "Não", "Talvez"]}, {"id": "vontade", "c": "Quer consulta com a Dra.", "t": "Você tem vontade de passar em consulta com a Dra. Franciele?", "type": "one", "o": ["Sim", "Não", "Talvez"]}]}], "prio": "((+a.eva>=7)||a.vontade==='Sim') ? 'quente' : (a.vontade==='Talvez'||a.integrado==='Sim'||a.integrado==='Talvez'||(+a.eva>=4)) ? 'morno' : 'frio'", "interesse": "(a.regiao||[]).join(', ')", "alerta": "[(+a.eva>=7?'dor '+a.eva+'/10':''),((a.sintomas||[]).indexOf('Formigamento ou dormência')>-1?'formigamento':''),((a.sintomas||[]).indexOf('Dor que desce para a perna (ciático)')>-1?'dor ciática':''),(a.remedio==='Todos os dias'?'remédio todo dia':'')].filter(Boolean).join(' · ')"};</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E2B656"/><stop offset=".55" stop-color="#C8962E"/><stop offset="1" stop-color="#A9761C"/></linearGradient></defs>
+  <symbol id="lg-mark" viewBox="257 510 1190 469"><path fill-rule="evenodd" d="M552.9,971.6C559.7,970.6 568.0,969.3 571.4,968.5C574.8,967.8 580.0,966.9 583.0,966.5C586.0,966.1 590.8,964.9 593.5,963.9C596.2,962.9 601.9,961.4 606.0,960.5C622.6,956.8 668.1,941.4 672.9,937.8C674.2,936.8 676.5,936.0 678.0,936.0C679.6,936.0 683.2,934.7 686.1,933.2C689.1,931.7 694.2,929.3 697.5,928.0C700.8,926.7 704.7,924.8 706.2,923.8C707.6,922.8 709.2,922.0 709.8,922.0C710.3,922.0 711.9,921.1 713.2,920.0C714.6,919.0 720.0,915.9 725.2,913.2C730.4,910.5 735.8,907.6 737.1,906.7C738.4,905.7 740.1,905.0 741.0,905.0C741.8,905.0 745.1,903.2 748.4,901.0C751.6,898.8 754.8,897.0 755.5,897.0C756.1,897.0 760.2,894.1 764.5,890.5C768.8,886.9 772.7,884.0 773.3,884.0C775.2,884.0 797.5,868.6 800.4,865.2C801.9,863.5 804.0,862.0 804.9,862.0C805.8,862.0 811.2,858.2 816.9,853.5C822.6,848.8 827.8,845.0 828.5,845.0C829.2,845.0 830.4,844.3 831.1,843.4C831.9,842.5 834.4,840.9 836.7,839.9C839.0,838.9 841.7,837.3 842.7,836.2C843.7,835.1 846.3,832.4 848.5,830.0C850.7,827.7 854.5,824.8 857.0,823.5C859.5,822.2 862.2,820.0 863.0,818.5C863.8,817.0 865.9,815.1 867.6,814.2C869.3,813.2 873.8,809.9 877.5,806.8C881.2,803.7 887.1,799.9 890.7,798.4L897.1,795.7L901.0,799.5C903.2,801.7 905.0,803.8 905.0,804.3C905.0,805.7 910.4,811.9 932.0,834.6C942.7,845.9 952.5,856.7 953.8,858.6C955.0,860.5 957.8,862.9 960.0,864.0C962.1,865.1 964.1,866.9 964.5,867.9C964.8,869.0 968.3,871.7 972.3,873.9C976.3,876.1 982.6,880.9 986.5,884.7C993.8,891.7 997.9,894.9 1003.3,897.6C1005.0,898.5 1007.6,900.3 1009.0,901.6C1010.4,902.8 1015.4,906.3 1020.1,909.2C1024.8,912.1 1030.4,915.8 1032.6,917.3C1040.2,922.9 1050.5,929.0 1052.1,929.0C1053.0,929.0 1055.6,930.4 1057.9,932.0C1063.8,936.3 1074.3,941.7 1079.3,943.1C1081.6,943.7 1085.8,945.3 1088.5,946.6C1094.1,949.3 1118.3,957.8 1127.5,960.4C1130.8,961.3 1135.6,963.0 1138.1,964.0C1140.7,965.1 1146.1,966.4 1150.1,967.0C1154.2,967.6 1161.5,968.7 1166.5,969.5C1177.5,971.2 1202.5,973.0 1216.3,973.0C1236.6,973.0 1268.6,968.7 1281.5,964.1C1283.2,963.5 1288.5,961.7 1293.5,960.1C1314.6,953.1 1318.5,951.4 1336.0,941.5C1340.7,938.9 1345.8,936.0 1347.5,935.2C1351.1,933.3 1360.8,926.1 1367.0,920.7C1369.5,918.6 1373.7,914.9 1376.3,912.7C1384.5,905.6 1395.2,894.4 1397.0,891.0C1398.4,888.4 1407.4,877.3 1412.0,872.5C1413.6,870.8 1415.8,867.2 1416.8,864.5C1417.9,861.7 1421.1,854.9 1423.9,849.2C1426.7,843.6 1429.0,838.5 1429.0,837.9C1429.0,837.3 1429.8,834.8 1430.9,832.2C1431.9,829.6 1434.2,823.2 1435.9,817.9C1443.7,794.3 1442.7,739.5 1433.9,715.2C1432.9,712.3 1432.0,708.9 1432.0,707.6C1432.0,706.3 1431.1,704.5 1430.1,703.6C1429.0,702.6 1427.8,700.4 1427.4,698.7C1427.1,697.0 1425.7,694.0 1424.4,692.0C1423.2,690.1 1421.2,686.0 1420.0,682.9C1418.8,679.5 1416.1,675.4 1413.5,672.5C1411.0,669.9 1409.0,667.3 1409.0,666.7C1409.0,664.4 1401.1,654.0 1392.2,644.5C1387.0,639.0 1382.5,634.2 1382.1,633.8C1380.6,631.9 1372.1,625.5 1364.7,620.6C1360.2,617.7 1355.4,614.1 1354.0,612.8C1352.6,611.5 1348.1,608.7 1344.0,606.6C1339.9,604.6 1333.8,601.4 1330.5,599.5C1327.2,597.6 1322.5,595.4 1320.0,594.6C1317.5,593.8 1310.7,591.3 1304.9,589.1C1293.9,585.0 1287.5,583.4 1268.4,580.0C1242.1,575.3 1192.9,575.6 1170.5,580.6C1164.5,582.0 1154.5,584.2 1148.5,585.5C1142.5,586.8 1133.0,589.5 1127.5,591.5C1122.0,593.5 1116.4,595.4 1115.0,595.7C1109.8,596.7 1096.4,601.3 1095.0,602.5C1092.3,604.8 1085.1,608.0 1082.8,608.0C1081.5,608.0 1078.5,609.1 1076.0,610.5C1073.5,611.9 1068.6,614.4 1065.0,616.1C1061.4,617.8 1057.6,619.6 1056.5,620.3C1055.4,620.9 1052.0,622.6 1048.9,624.1C1045.9,625.6 1040.5,628.8 1036.9,631.3C1029.7,636.3 1022.6,640.4 1019.2,641.5C1017.9,641.8 1013.7,644.6 1009.8,647.6C1005.8,650.5 1000.1,654.3 997.0,656.0C987.3,661.5 982.0,664.9 979.7,667.4C977.3,670.0 966.4,676.0 964.0,676.0C963.2,676.0 961.3,678.0 959.8,680.5C958.2,683.0 956.2,685.3 955.3,685.7C954.3,686.0 951.4,688.2 948.9,690.5C940.8,698.0 933.1,698.8 925.8,692.8C920.9,688.7 912.7,680.6 903.5,670.6C899.6,666.4 893.6,660.5 889.9,657.5C886.3,654.5 881.2,648.9 878.5,645.0L873.6,637.9L876.4,632.5C879.4,626.6 887.7,616.6 901.0,603.0C905.6,598.3 912.2,590.9 915.8,586.5C919.3,582.1 923.0,578.1 923.9,577.6C924.8,577.1 927.8,574.4 930.6,571.6C935.8,566.4 946.8,557.2 949.8,555.6C950.7,555.1 954.0,552.6 957.0,550.0C960.0,547.4 963.3,545.0 964.3,544.7C965.9,544.1 969.8,541.5 981.8,533.0C984.1,531.4 986.3,530.0 986.5,530.0C987.9,530.0 1007.8,520.0 1008.8,518.7C1010.4,516.8 1008.8,515.6 1005.7,516.5C999.9,518.2 990.2,522.4 987.5,524.4C984.4,526.7 971.8,533.0 970.3,533.0C969.8,533.0 968.5,533.9 967.3,534.9C966.2,535.9 963.9,537.5 962.2,538.4C960.4,539.3 959.0,540.4 959.0,540.9C959.0,541.3 956.7,542.7 953.9,544.0C951.1,545.4 947.9,547.6 946.8,549.0C945.7,550.4 941.8,553.5 938.1,556.0C934.4,558.5 929.3,561.8 926.9,563.5C924.5,565.1 920.0,568.6 917.0,571.2C914.0,573.9 909.3,578.0 906.7,580.3C899.7,586.4 895.2,590.8 889.2,597.6C886.3,600.8 883.1,604.4 881.9,605.5C880.8,606.6 876.0,611.4 871.3,616.2C866.1,621.6 861.9,625.0 860.7,625.0C857.7,625.0 850.3,619.9 844.0,613.6C841.0,610.5 837.1,607.5 835.3,606.9C833.5,606.3 831.1,604.5 829.9,602.9C828.8,601.3 824.5,597.5 820.5,594.5C816.4,591.5 812.1,587.7 810.8,585.9C809.5,584.2 806.9,582.0 805.0,580.9C803.1,579.9 799.0,577.0 796.0,574.5C793.0,572.0 788.5,568.8 786.1,567.2C783.7,565.7 778.6,562.2 774.8,559.5C770.9,556.8 766.1,553.4 764.0,552.0C761.9,550.6 757.3,547.4 753.7,544.7C750.2,542.1 745.3,539.3 742.9,538.5C740.5,537.6 738.3,536.5 738.0,536.0C736.8,534.1 725.7,528.0 723.5,528.0C722.3,528.0 719.6,526.7 717.5,525.0C715.5,523.4 712.1,521.7 710.1,521.4C708.1,521.0 705.4,519.9 704.1,518.9C701.0,516.4 699.0,516.5 699.0,519.0C699.0,520.1 699.6,521.0 700.4,521.0C701.1,521.0 703.4,522.3 705.4,523.9C707.6,525.7 710.9,527.2 713.5,527.6C716.2,528.0 718.7,529.1 720.2,530.7C722.9,533.7 732.2,540.0 733.8,540.0C734.4,540.0 735.4,540.8 735.9,541.8C736.5,542.9 739.5,545.2 742.6,547.1C745.7,549.0 749.5,551.6 750.9,553.0C752.3,554.5 755.1,556.8 757.0,558.2C764.1,563.4 786.8,586.6 788.8,590.7C790.0,593.0 793.0,596.5 795.5,598.5C798.0,600.6 800.0,602.9 800.0,603.7C800.0,604.5 801.2,606.4 802.8,607.8C804.3,609.3 807.3,612.9 809.5,615.8C811.6,618.6 813.7,621.0 814.1,621.0C815.2,621.0 824.0,635.6 824.0,637.3C824.0,638.1 825.4,639.3 827.0,639.9C829.2,640.6 830.2,641.7 830.6,644.0C831.0,645.7 833.2,649.0 835.7,651.6C838.3,654.1 841.6,659.2 843.5,663.3C845.3,667.3 848.0,671.6 849.4,672.9C850.8,674.3 852.0,675.8 852.0,676.4C852.0,677.0 853.3,679.3 854.8,681.6C864.4,696.0 869.1,703.7 871.6,708.9C872.5,710.8 874.2,713.8 875.5,715.4C879.3,720.5 886.0,734.2 886.0,737.1C886.0,738.9 885.0,740.6 883.1,742.2C881.5,743.5 878.2,746.9 875.9,749.9C873.4,753.0 868.4,757.3 863.6,760.5C859.1,763.4 853.6,767.7 851.3,769.9C846.5,774.6 843.8,775.0 838.2,772.1C832.5,769.1 820.1,757.7 814.0,749.7C809.8,744.3 807.7,742.4 805.7,742.2C803.8,742.0 802.2,740.7 800.6,738.1C797.2,732.8 779.9,716.5 766.5,706.0C763.3,703.6 760.3,700.4 759.8,698.9C759.1,697.0 757.4,695.6 753.7,694.0C750.3,692.6 745.8,689.2 740.5,684.0C736.1,679.7 729.8,674.5 726.5,672.4C723.2,670.4 719.0,667.3 717.1,665.7C715.2,664.1 712.2,662.1 710.3,661.4C708.5,660.6 705.1,658.0 702.7,655.6C700.3,653.2 695.2,649.8 691.4,648.0C687.6,646.2 683.1,643.7 681.5,642.5C679.9,641.3 677.3,640.0 675.9,639.7C674.2,639.3 672.8,637.9 672.0,636.1C671.2,634.1 669.7,632.7 667.4,632.0C665.5,631.3 659.9,628.2 655.0,624.9C650.0,621.7 643.3,618.1 640.1,617.0C637.0,616.0 630.6,613.3 625.9,611.0C621.3,608.8 615.9,606.7 613.9,606.4C611.5,606.0 609.8,605.0 609.0,603.5C608.0,601.7 605.1,600.3 596.6,597.6C590.5,595.7 584.4,593.9 583.0,593.5C581.6,593.2 576.9,591.8 572.5,590.6C568.1,589.3 560.9,587.5 556.5,586.5C552.1,585.6 546.9,584.4 545.0,584.0C527.7,579.6 523.8,578.7 519.0,578.0C511.1,576.8 452.8,576.8 447.8,578.0C444.1,578.8 434.0,581.0 414.5,585.2C404.2,587.4 399.0,589.1 390.4,593.1C385.5,595.3 378.8,598.2 375.5,599.4C372.2,600.6 366.1,603.8 362.0,606.5C357.9,609.3 353.2,612.2 351.7,613.0C350.2,613.7 346.1,616.8 342.7,619.8C339.3,622.8 334.7,626.1 332.5,627.2C327.4,629.8 325.0,631.9 323.9,634.7C323.4,636.0 320.8,638.4 318.0,640.1C315.3,641.8 313.0,643.5 313.0,643.8C313.0,644.2 309.8,648.1 306.0,652.5C302.1,656.9 297.8,662.8 296.5,665.7C295.1,668.5 293.5,671.2 293.0,671.5C292.4,671.9 290.4,675.2 288.6,678.8C286.7,682.5 284.3,686.3 283.3,687.3C281.5,688.8 280.3,691.2 275.3,703.0C271.7,711.4 266.8,729.5 265.0,741.3C263.3,752.2 263.1,757.3 263.6,775.1C263.9,786.7 264.5,797.3 265.1,798.7C265.6,800.0 266.0,802.6 266.0,804.3C266.1,806.1 266.8,809.3 267.6,811.5C268.5,813.7 270.0,818.6 271.0,822.5C274.8,836.5 280.0,848.8 284.6,854.3C285.9,855.9 287.0,857.9 287.0,858.8C287.0,861.1 290.2,866.9 294.5,872.6C296.5,875.2 299.0,878.9 300.0,880.9C301.0,882.9 305.5,888.3 309.9,892.9C314.3,897.5 318.2,902.1 318.5,903.1C318.9,904.2 319.5,905.0 319.9,905.0C320.4,905.0 322.5,906.8 324.6,909.1C326.8,911.3 331.3,915.1 334.7,917.6C338.1,920.0 341.8,923.3 342.8,924.8C344.1,926.6 346.4,928.0 349.5,928.8C352.8,929.7 354.4,930.7 354.7,932.1C355.0,933.3 357.1,935.0 359.4,936.1C361.7,937.1 366.4,939.8 370.0,941.9C378.9,947.4 384.9,950.2 395.3,953.9C400.2,955.6 405.1,957.5 406.3,958.2C407.5,958.8 409.8,959.7 411.5,960.1C413.1,960.5 417.6,962.0 421.3,963.4C425.1,964.9 432.3,966.7 437.3,967.5C442.4,968.3 449.4,969.4 453.0,970.0C476.5,974.1 528.0,974.9 552.9,971.6ZM506.5,938.4C492.9,937.7 473.4,935.9 463.5,934.4C452.1,932.6 431.0,926.6 426.4,923.9C424.7,922.8 422.4,922.0 421.4,922.0C420.3,922.0 417.7,920.8 415.5,919.5C413.3,918.1 410.7,917.0 409.7,917.0C407.3,917.0 399.3,912.8 394.6,909.1C392.5,907.4 390.1,906.0 389.4,906.0C388.7,906.0 386.6,904.7 384.8,903.2C383.0,901.7 378.9,898.6 375.6,896.5C372.4,894.3 369.5,891.9 369.3,891.3C369.0,890.6 367.3,889.1 365.4,887.9C363.5,886.8 361.1,884.1 360.0,882.1C359.0,880.0 356.3,877.2 354.1,875.7C349.5,872.6 337.0,860.7 337.0,859.4C337.0,858.9 336.0,856.9 334.7,855.0C333.4,853.1 331.3,848.9 330.0,845.7C328.8,842.5 326.7,839.2 325.4,838.4C322.9,836.7 320.0,830.3 320.0,826.4C320.0,825.0 318.7,821.1 317.0,817.7C315.4,814.3 313.6,809.1 313.0,806.1C312.5,803.1 311.6,800.2 311.1,799.6C309.4,797.6 308.6,764.5 310.0,752.0C311.3,739.8 314.9,727.1 320.1,716.8C321.7,713.7 323.0,710.5 323.0,709.7C323.0,709.0 324.3,707.1 326.0,705.5C327.6,703.9 329.0,701.7 329.0,700.5C329.0,696.5 344.3,674.9 348.8,672.6C350.3,671.8 352.5,670.0 353.7,668.6C355.0,667.2 356.7,666.0 357.5,666.0C358.4,666.0 360.0,664.4 361.2,662.4C363.9,657.7 371.4,652.2 376.9,650.7C380.0,649.9 382.2,648.4 384.3,645.8C386.0,643.6 388.2,642.0 389.4,642.0C390.6,642.0 394.9,639.9 399.0,637.5C403.1,635.0 408.3,632.5 410.5,631.9C412.7,631.4 419.2,629.4 425.0,627.5C446.1,620.6 463.6,618.0 489.5,618.0C508.5,618.0 514.0,618.8 546.5,625.6C552.6,626.8 573.5,633.3 574.8,634.3C577.2,636.2 585.5,639.7 590.7,640.9C593.5,641.6 597.3,643.2 599.1,644.6C600.9,645.9 603.1,647.0 604.0,647.0C604.9,647.0 606.0,647.4 606.5,647.9C607.9,649.2 619.8,655.4 624.0,657.0C625.9,657.7 629.3,659.6 631.4,661.2C633.6,662.7 635.7,664.0 636.2,664.0C637.2,664.0 651.8,674.2 654.5,676.7C655.6,677.8 659.7,680.7 663.5,683.2C668.3,686.4 671.1,689.0 672.2,691.4C673.3,693.7 675.4,695.7 678.1,697.1C684.2,700.2 693.2,706.4 695.7,709.4C697.0,710.8 698.7,712.0 699.5,712.0C700.3,712.0 702.0,713.7 703.3,715.8C706.2,720.2 713.9,727.5 716.8,728.4C719.1,729.2 728.0,739.5 728.0,741.5C728.0,742.2 730.4,744.2 733.4,745.9C736.4,747.5 739.8,750.4 741.0,752.2C742.3,754.0 745.9,758.1 749.1,761.2C752.9,765.0 755.2,768.1 755.9,770.7C757.4,776.2 759.3,778.4 765.3,781.8C770.4,784.7 775.7,790.2 783.0,800.3C784.9,802.9 787.7,806.7 789.2,808.7C793.6,814.3 793.3,817.0 787.9,822.5C785.8,824.8 784.0,827.1 784.0,827.7C784.0,828.3 781.9,830.2 779.2,831.9C776.6,833.6 772.5,836.3 770.0,838.0C767.5,839.6 764.9,841.0 764.2,841.0C763.5,841.0 760.8,843.0 758.2,845.5C751.8,851.6 738.0,861.7 733.4,863.6C731.3,864.5 727.5,867.0 725.0,869.2C720.6,873.2 713.3,877.0 707.8,878.4C706.3,878.7 704.6,879.9 704.0,881.0C703.4,882.1 700.5,884.1 697.5,885.6C694.4,887.0 690.6,889.3 689.0,890.7C687.3,892.1 683.9,893.8 681.3,894.6C678.8,895.4 674.6,897.4 672.0,899.0C669.4,900.7 666.8,902.0 666.1,902.0C665.5,902.0 659.1,905.0 651.9,908.6C640.3,914.4 616.4,923.0 612.0,923.0C611.1,923.0 609.6,923.6 608.5,924.3C607.4,925.1 603.1,926.2 599.0,927.0C594.9,927.7 587.9,929.4 583.5,930.7C567.3,935.6 529.0,939.5 506.5,938.4ZM1178.0,934.9C1173.3,934.5 1166.6,933.3 1163.0,932.2C1159.4,931.1 1154.5,929.8 1152.0,929.2C1149.5,928.6 1144.5,927.4 1140.8,926.6C1137.1,925.7 1132.6,924.1 1130.8,923.0C1129.0,921.9 1126.8,921.0 1126.0,921.0C1125.2,921.0 1123.2,920.3 1121.5,919.4C1119.8,918.5 1116.7,917.2 1114.4,916.6C1112.2,915.9 1107.0,913.3 1102.9,910.9C1098.8,908.5 1093.1,905.6 1090.2,904.4C1083.7,901.7 1072.4,894.6 1068.7,890.8C1067.1,889.3 1064.1,887.1 1062.0,886.0C1059.9,884.9 1057.8,883.6 1057.5,883.0C1057.1,882.4 1053.4,879.5 1049.2,876.5C1045.0,873.5 1036.8,866.6 1031.2,861.0C1025.5,855.5 1019.8,850.2 1018.6,849.2C1017.4,848.3 1014.1,844.3 1011.3,840.5C1008.4,836.6 1004.9,832.8 1003.5,832.0C1002.0,831.2 1000.2,829.3 999.4,827.8C998.6,826.3 997.5,825.0 997.0,825.0C996.5,825.0 994.6,823.0 992.8,820.6C981.6,805.6 977.4,800.8 974.9,799.4C972.8,798.3 972.0,797.2 972.0,795.2C972.0,792.2 968.6,786.6 961.5,778.0C958.9,775.0 955.6,769.7 953.9,766.2C952.3,762.8 950.1,759.1 949.0,758.0C947.8,756.8 947.0,754.7 947.0,752.6C947.0,747.4 956.2,738.9 983.2,719.2C988.4,715.4 992.3,711.8 993.0,710.1C993.8,708.0 995.1,707.0 997.4,706.6C999.2,706.2 1001.6,705.0 1002.6,703.9C1003.7,702.7 1006.3,700.9 1008.5,699.8C1010.7,698.7 1015.1,695.1 1018.2,691.9C1021.4,688.7 1025.2,685.8 1026.7,685.4C1030.9,684.4 1040.2,679.1 1042.3,676.4C1043.3,675.1 1046.3,673.1 1049.0,671.9C1051.7,670.8 1054.6,669.0 1055.6,667.9C1056.5,666.9 1059.0,665.5 1061.0,665.0C1063.0,664.5 1068.3,661.6 1072.8,658.6C1077.2,655.6 1081.9,652.9 1083.2,652.5C1084.5,652.1 1086.9,650.9 1088.6,649.9C1090.3,648.8 1092.6,648.0 1093.7,648.0C1094.7,648.0 1097.8,646.6 1100.5,644.9C1103.1,643.2 1108.7,641.0 1112.8,639.9C1116.9,638.9 1120.8,637.6 1121.5,637.0C1124.0,634.9 1146.7,626.9 1153.0,625.9C1156.6,625.3 1162.9,624.0 1167.0,623.0C1179.8,619.9 1186.1,619.0 1202.6,617.9C1215.8,617.0 1221.0,617.1 1233.5,618.4C1257.0,621.0 1262.1,621.8 1268.2,623.9C1271.4,625.1 1274.8,626.0 1275.9,626.0C1277.0,626.0 1279.4,626.6 1281.2,627.4C1283.0,628.2 1286.3,629.3 1288.5,629.9C1290.7,630.5 1295.5,632.8 1299.2,635.0C1303.2,637.4 1307.8,639.3 1310.6,639.7C1313.6,640.1 1316.8,641.5 1319.5,643.6C1321.9,645.4 1325.3,647.6 1327.2,648.6C1329.0,649.5 1332.1,651.7 1334.1,653.4C1336.1,655.1 1340.5,658.5 1343.9,660.9C1347.3,663.3 1351.0,666.6 1352.1,668.1C1353.2,669.7 1355.5,671.7 1357.1,672.5C1358.7,673.4 1360.6,675.5 1361.4,677.3C1362.1,679.1 1365.1,682.7 1368.1,685.4C1371.0,688.0 1374.2,692.0 1375.2,694.2C1376.2,696.5 1378.6,700.5 1380.5,703.2C1382.4,705.8 1384.0,708.7 1384.0,709.5C1384.0,710.4 1385.4,713.9 1387.2,717.3C1391.1,725.0 1393.5,733.2 1396.1,748.0C1397.9,758.0 1398.0,762.0 1397.5,778.0C1396.8,798.3 1395.3,806.7 1390.0,819.0C1388.4,823.0 1387.0,826.8 1387.0,827.5C1387.0,829.7 1382.3,839.5 1379.7,842.6C1378.4,844.2 1376.2,847.5 1375.0,850.0C1373.7,852.5 1371.8,855.5 1370.6,856.6C1369.4,857.8 1366.7,861.1 1364.5,864.0C1362.3,867.0 1357.8,871.9 1354.6,874.9C1351.3,878.0 1345.5,883.7 1341.6,887.6C1337.7,891.5 1332.5,896.0 1330.2,897.6C1327.8,899.2 1322.6,902.6 1318.7,905.3C1314.7,907.9 1309.9,910.7 1308.0,911.6C1306.1,912.4 1301.3,914.6 1297.5,916.5C1282.7,923.6 1277.3,925.8 1273.0,926.4C1270.5,926.8 1265.8,927.9 1262.5,928.9C1251.9,932.1 1247.7,933.0 1236.5,934.5C1224.7,936.1 1192.9,936.3 1178.0,934.9ZM555.0,836.0C561.3,835.5 568.3,834.6 570.5,834.1C572.7,833.6 577.0,832.7 580.0,832.1C585.6,831.0 590.0,828.5 590.8,826.0C591.1,825.1 590.5,824.9 588.4,825.4C586.8,825.7 583.2,826.4 580.5,827.0C577.8,827.5 572.4,828.7 568.5,829.6C562.9,830.9 556.8,831.2 537.6,831.1C515.6,830.9 513.0,830.7 504.1,828.4C498.8,827.0 492.2,825.1 489.5,824.0C486.8,823.0 482.5,821.6 480.0,820.9C477.5,820.2 472.6,818.3 469.0,816.7C465.4,815.1 460.0,812.9 457.0,811.8C454.0,810.6 450.1,808.5 448.3,807.1C446.5,805.7 443.4,803.3 441.3,801.7C439.2,800.2 435.4,797.4 432.9,795.6C426.0,790.6 424.3,789.8 423.4,791.2C422.2,793.0 433.3,802.7 444.5,809.5C446.4,810.7 448.7,812.3 449.8,813.3C450.8,814.2 452.1,815.0 452.7,815.0C453.3,815.0 454.8,815.9 456.2,816.9C457.5,818.0 462.4,820.7 467.0,823.0C471.7,825.2 476.4,827.6 477.4,828.2C478.5,828.7 485.0,830.8 491.9,832.7C502.8,835.7 506.7,836.3 521.0,837.0C530.1,837.4 538.9,837.6 540.5,837.3C542.1,837.1 548.7,836.5 555.0,836.0ZM1201.0,835.0C1221.6,832.0 1228.2,830.2 1234.3,825.6C1236.1,824.3 1239.3,822.7 1241.5,822.0C1243.7,821.3 1246.4,820.0 1247.5,819.1C1248.6,818.1 1250.6,816.6 1252.0,815.7C1253.4,814.7 1256.5,812.4 1259.0,810.5C1261.5,808.6 1265.2,806.1 1267.2,805.0C1270.9,803.0 1272.2,801.0 1269.8,801.0C1269.1,801.0 1265.4,803.0 1261.7,805.5C1257.9,808.0 1254.4,810.0 1253.8,810.0C1253.3,810.0 1247.4,812.3 1240.7,815.2C1233.7,818.2 1226.2,820.7 1223.0,821.1C1220.0,821.4 1216.2,822.2 1214.5,822.8C1200.3,827.8 1189.8,830.2 1179.0,830.7C1165.6,831.4 1147.9,829.8 1136.5,826.9C1120.3,822.8 1119.9,822.7 1118.7,823.9C1117.3,825.3 1120.6,829.0 1123.2,829.0C1124.2,829.0 1128.3,829.9 1132.3,831.0C1136.2,832.1 1144.2,833.5 1150.0,834.1C1155.8,834.6 1162.3,835.5 1164.5,836.0C1169.4,837.1 1190.7,836.5 1201.0,835.0Z"/></symbol>
+  <symbol id="lg-word" viewBox="172 1157 1369 108"><path fill-rule="evenodd" d="M1488.5,1259.4C1489.8,1258.0 1491.2,1255.4 1491.6,1253.7C1491.9,1251.9 1492.6,1250.0 1493.1,1249.5C1494.2,1248.0 1503.0,1223.1 1503.0,1221.3C1503.0,1219.0 1512.2,1204.8 1513.1,1205.7C1513.9,1206.6 1515.8,1214.0 1521.6,1239.5C1525.6,1256.7 1527.2,1260.0 1532.1,1260.0C1537.5,1260.0 1538.0,1257.0 1535.6,1240.5C1534.7,1234.5 1533.7,1227.6 1533.4,1225.4C1533.2,1223.1 1532.0,1219.5 1531.0,1217.4C1529.9,1215.3 1529.0,1212.4 1529.0,1210.9C1529.0,1209.4 1528.1,1205.4 1527.1,1201.9C1524.7,1193.9 1522.0,1181.0 1522.0,1177.2C1522.0,1173.9 1516.1,1161.8 1514.3,1161.2C1512.9,1160.8 1506.8,1173.3 1503.5,1183.5C1500.0,1194.0 1496.3,1203.4 1494.0,1207.7C1492.9,1209.8 1492.0,1211.9 1492.0,1212.3C1492.0,1212.8 1491.0,1214.6 1489.8,1216.3C1488.5,1218.1 1487.0,1221.2 1486.5,1223.4C1486.0,1225.6 1485.0,1227.5 1484.5,1227.7C1483.2,1228.1 1474.2,1207.8 1470.1,1195.5C1463.6,1175.7 1456.7,1160.7 1454.2,1161.2C1453.3,1161.4 1452.2,1163.1 1451.7,1165.0C1451.2,1166.9 1448.8,1175.0 1446.5,1183.0C1444.2,1191.0 1441.8,1201.1 1441.1,1205.5C1440.4,1209.9 1438.8,1217.8 1437.5,1223.0C1435.4,1231.4 1432.7,1243.9 1431.2,1252.3C1430.6,1255.7 1434.2,1260.0 1437.6,1260.0C1441.3,1260.0 1447.8,1251.6 1446.6,1248.5C1446.3,1247.7 1446.5,1245.6 1447.1,1243.8C1447.6,1242.0 1448.5,1237.1 1449.0,1233.0C1449.9,1224.9 1454.6,1209.0 1455.9,1209.0C1456.4,1209.0 1457.0,1210.0 1457.4,1211.2C1457.7,1212.5 1459.2,1214.2 1460.8,1215.1C1462.6,1216.1 1464.3,1218.3 1465.3,1221.1C1466.1,1223.5 1468.6,1230.2 1470.7,1236.0C1472.8,1241.8 1475.2,1247.6 1476.1,1249.0C1477.0,1250.4 1478.0,1252.7 1478.4,1254.1C1479.0,1256.9 1483.3,1262.0 1485.0,1262.0C1485.6,1262.0 1487.2,1260.8 1488.5,1259.4ZM371.4,1252.8C372.1,1244.9 372.2,1233.0 371.6,1202.5C371.3,1189.3 371.1,1175.9 371.1,1172.8C371.0,1168.4 370.5,1166.5 369.0,1165.0C366.2,1162.2 362.6,1162.5 360.1,1165.6C358.1,1168.1 358.0,1169.5 358.0,1192.1C358.0,1205.6 357.6,1217.0 357.0,1218.5L356.0,1221.1L352.6,1218.3C347.2,1213.8 336.8,1199.3 331.0,1188.1C328.0,1182.4 325.0,1177.5 324.2,1177.3C323.5,1177.0 322.0,1175.1 321.0,1173.1C318.4,1168.3 311.6,1161.0 309.7,1161.0C305.9,1161.0 305.5,1165.7 305.8,1211.5C306.1,1254.9 306.1,1255.5 308.2,1257.7C310.8,1260.5 314.0,1260.6 317.0,1258.2C319.2,1256.4 319.2,1255.9 319.4,1233.9C319.5,1212.8 319.6,1211.3 321.7,1208.1L323.8,1204.8L325.7,1207.0C326.7,1208.3 328.9,1210.9 330.6,1212.9C332.3,1214.9 336.1,1220.5 339.0,1225.5C342.0,1230.5 345.8,1236.1 347.6,1238.0C349.3,1239.9 351.7,1243.4 352.9,1245.8C354.1,1248.1 355.5,1250.0 356.0,1250.0C356.5,1250.0 358.1,1251.8 359.5,1254.0C362.4,1258.6 366.7,1261.2 369.2,1259.9C370.3,1259.3 371.0,1257.2 371.4,1252.8ZM845.7,1259.8C846.9,1257.7 847.2,1248.6 847.2,1207.3C847.2,1180.7 846.8,1167.5 846.1,1166.1C843.2,1160.7 836.9,1161.7 834.9,1167.9C834.1,1170.3 833.7,1178.5 833.8,1192.2C833.9,1210.9 833.8,1213.1 832.1,1215.1C828.6,1219.4 825.9,1216.9 812.1,1196.0C809.4,1191.9 805.8,1186.9 804.1,1184.9C802.4,1183.0 800.6,1180.3 800.0,1178.9C797.7,1173.6 788.0,1162.0 785.8,1162.0C781.5,1162.0 780.8,1169.6 781.0,1215.0C781.1,1259.4 781.2,1260.0 786.8,1260.0C793.9,1260.0 794.8,1256.5 795.0,1225.5C795.1,1214.0 795.4,1203.7 795.8,1202.8C796.8,1200.4 798.3,1201.7 801.0,1207.0C802.2,1209.5 804.9,1212.9 807.0,1214.7C810.3,1217.6 812.8,1221.1 822.4,1236.8C828.1,1246.1 841.1,1261.0 843.7,1261.0C844.3,1261.0 845.2,1260.4 845.7,1259.8ZM1306.0,1257.7C1310.5,1256.0 1312.9,1254.5 1313.8,1252.7C1314.5,1251.3 1315.9,1249.9 1316.9,1249.5C1319.3,1248.8 1322.5,1238.9 1324.0,1227.8C1325.6,1215.9 1325.0,1168.3 1323.2,1165.2C1321.4,1162.0 1316.4,1162.5 1313.7,1166.1C1311.9,1168.6 1311.7,1171.0 1311.3,1199.6C1311.0,1216.6 1310.4,1232.1 1309.9,1234.1C1309.3,1236.4 1308.1,1238.1 1306.5,1238.8C1305.1,1239.5 1303.5,1241.1 1303.0,1242.5C1301.4,1246.6 1296.0,1248.3 1286.4,1247.7C1282.0,1247.5 1277.3,1246.7 1276.0,1246.0C1273.8,1244.8 1268.4,1239.2 1266.5,1236.1C1265.9,1235.2 1265.3,1220.8 1264.9,1202.5C1264.4,1175.4 1264.1,1170.0 1262.7,1167.3C1259.8,1161.7 1254.2,1161.7 1251.9,1167.3C1249.7,1172.4 1250.1,1225.1 1252.4,1234.9C1255.1,1246.8 1259.2,1252.5 1268.0,1257.0C1274.4,1260.3 1278.2,1260.9 1289.5,1260.6C1297.2,1260.3 1301.0,1259.7 1306.0,1257.7ZM188.8,1257.6C189.9,1256.5 190.2,1248.0 190.3,1213.4C190.5,1174.2 190.4,1170.2 188.7,1167.3C186.8,1163.7 183.6,1161.6 181.4,1162.4C177.5,1163.9 177.1,1168.1 176.9,1213.0L176.7,1256.3L179.1,1258.2C181.7,1260.4 186.4,1260.0 188.8,1257.6ZM498.6,1257.7C501.2,1255.4 501.2,1255.1 501.7,1240.9C501.9,1233.0 502.4,1224.7 502.8,1222.5L503.5,1218.5L522.7,1217.9C536.1,1217.5 542.4,1216.9 543.5,1216.0C545.1,1214.6 545.5,1210.3 544.1,1208.1C542.8,1206.1 535.9,1205.1 523.7,1205.0C511.7,1205.0 504.4,1203.6 503.1,1201.1C501.6,1198.2 501.1,1187.7 502.1,1182.8C502.8,1179.6 503.9,1177.6 505.3,1176.9C506.4,1176.2 514.9,1175.5 524.8,1175.2C540.1,1174.8 542.5,1174.5 544.1,1172.9C546.4,1170.6 546.6,1166.7 544.5,1164.7C543.1,1163.3 535.6,1162.8 504.8,1162.1C497.1,1161.9 490.8,1163.3 488.9,1165.6C488.0,1166.8 487.6,1175.9 487.5,1205.8C487.5,1227.1 487.6,1247.1 487.8,1250.2C488.5,1259.3 493.0,1262.5 498.6,1257.7ZM663.5,1257.5L666.0,1255.1L666.0,1212.6C666.0,1183.1 665.7,1169.3 664.9,1167.6C662.5,1162.4 655.6,1162.1 653.0,1167.1C652.2,1168.4 651.9,1183.5 651.9,1212.8C651.9,1256.5 651.9,1256.5 654.0,1258.2C657.1,1260.7 660.7,1260.4 663.5,1257.5ZM974.4,1257.9L977.0,1255.9L977.0,1213.7C977.0,1188.6 976.6,1170.0 976.0,1167.9C975.4,1165.9 974.1,1163.5 973.0,1162.5C971.3,1160.9 970.6,1160.9 968.6,1161.9C963.6,1164.6 963.5,1165.4 963.3,1211.9L963.2,1255.2L965.5,1257.6C968.5,1260.5 970.9,1260.6 974.4,1257.9ZM1118.6,1258.6C1120.4,1257.2 1120.5,1255.3 1121.0,1217.3C1121.3,1195.4 1121.9,1176.9 1122.3,1176.2C1122.8,1175.4 1125.8,1175.0 1131.2,1175.0C1142.3,1175.0 1145.3,1172.1 1141.8,1164.5C1140.8,1162.2 1140.2,1162.0 1134.6,1162.1C1131.2,1162.1 1120.0,1162.1 1109.5,1162.1C1088.4,1162.1 1087.0,1162.5 1087.0,1168.5C1087.0,1173.0 1089.2,1174.4 1097.3,1175.0C1104.3,1175.5 1104.3,1175.5 1105.6,1179.0C1106.5,1181.6 1106.9,1192.4 1106.9,1219.2L1107.0,1255.9L1109.6,1257.9C1112.7,1260.3 1115.8,1260.6 1118.6,1258.6Z"/></symbol>
+  <symbol id="ck" viewBox="0 0 14 14"><path d="M2.5 7.4 5.6 10.4 11.5 3.8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="https://clinicainfinitum.com.br/" aria-label="Clínica Infinitum"><svg class="mk"><use href="#lg-mark"/></svg><svg class="wd"><use href="#lg-word"/></svg></a>
+    <a class="btn sm" href="#pesquisa">Falar com a equipe</a>
+  </div>
+</header>
+<main>
+  <section class="dhero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Clínica Infinitum · Ortopedia e dor</p>
+        <h1 id="h1">Tratar a dor <i>na causa</i>, não só no sintoma.</h1>
+        <p class="who">Dra. Franciele Oliveira</p>
+        <p class="crm">Ortopedista · CRM-MG 72395 · RQE 50553</p>
+        <p class="bio">Ortopedista, a Dra. Franciele Oliveira cuida da dor na coluna, nos joelhos, no quadril, no ombro e nos pés. Faz cirurgia do pé e do tornozelo e procedimentos para o controle da dor, como bloqueios e infiltrações, sempre buscando devolver o movimento do dia a dia.</p>
+        <a class="btn" href="#pesquisa">Responder a pesquisa</a>
+      </div>
+      <figure><img src="franciele.jpg" alt="Dra. Franciele Oliveira" width="461" height="576"></figure>
+    </div>
+  </section>
+  <section class="block" aria-labelledby="h2w" style="padding-top:8px">
+    <div class="wrap">
+      <div class="sec-head"><p class="kicker">Com o que a Dra. Franciele trabalha</p><h2 id="h2w">Cuidado de perto, do diagnóstico ao acompanhamento.</h2></div>
+      <div class="work"><div><h3>Coluna</h3><p>Dor lombar, no meio das costas e no pescoço, inclusive a dor que desce para a perna.</p></div><div><h3>Joelho e quadril</h3><p>Dor ao subir escada, agachar ou caminhar, rigidez e estalos.</p></div><div><h3>Ombro</h3><p>Dor e limitação para levantar o braço e dormir.</p></div><div><h3>Pé e tornozelo</h3><p>Dor nos pés, deformidades e cirurgia do pé e do tornozelo.</p></div><div><h3>Bloqueios e infiltrações</h3><p>Procedimentos para aliviar a dor e ajudar na reabilitação.</p></div><div><h3>Dor e peso juntos</h3><p>Quando o peso piora a dor, o cuidado é feito em conjunto com a Dra. Sabrina.</p></div></div>
+    </div>
+  </section>
+  <section class="block form-band" id="pesquisa" aria-labelledby="h2q">
+    <div class="wrap">
+      <div class="qwrap">
+        <div class="qhead"><p class="kicker">Pesquisa sobre dor crônica</p><h2 id="h2q">Conte um pouco sobre você</h2><p>Responda em cerca de 2 minutos. Assim a Dra. Franciele já conhece a sua dor e a equipe apresenta as opções de avaliação na clínica.</p></div>
+        <div class="card" id="qbox" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+  <section class="block" style="padding-block:44px">
+    <div class="wrap"><p class="kicker" style="margin-bottom:12px">Também na Clínica Infinitum</p><div class="others"><a class="link" href="https://dramarina.clinicainfinitum.com.br/">Dra. Marina Hoehne · pele, cabelos e unhas</a><a class="link" href="https://drasabrina.clinicainfinitum.com.br/">Dra. Sabrina Marmith · saúde corporal</a><a class="link" href="https://clinicainfinitum.com.br/">Conhecer a clínica</a></div></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--ink);font-weight:500">Clínica Infinitum</b><br>Rua Úrsula Paulino, 1422 · sala 205 · Betânia · Belo Horizonte / MG<br><a href="https://wa.me/5531997436696">WhatsApp (31) 99743-6696</a></div>
+    <div>Dra. Franciele Oliveira · Ortopedista · CRM-MG 72395 · RQE 50553<br>Responsável técnica: Dra. Franciele Oliveira de Paula · CRM-MG 72395 · RQE 50553</div>
+  </div>
+</footer>
+<script>
+(function(){
+var C = window.PAGE, a = {}, step = 0, KEY = 'inf-'+C.slug+'-v1';
+try { var sv = JSON.parse(localStorage.getItem(KEY)); if (sv && sv.a) { a = sv.a; step = sv.step||0; } } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify({a:a, step:step})); } catch(e){} }
+function has(p){ return (a.objetivos||[]).some(function(x){ return x.indexOf(p)===0; }); }
+function vis(o){ return !o.show || (new Function('a','has', 'return ('+o.show+');'))(a, has); }
+function steps(){ return C.steps.filter(vis).concat([{ t:'Seus dados para contato', contato:1 }]); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+var box = document.getElementById('qbox');
+function qHtml(q){
+  var v = a[q.id], h = '<div class="qq" data-q="'+q.id+'"><div class="lbl">'+esc(q.t)+'</div>';
+  if (q.hint) h += '<div class="hint">'+esc(q.hint)+'</div>';
+  if (q.type==='one'||q.type==='multi') {
+    h += '<div class="opts">' + q.o.map(function(o){ var on = q.type==='one' ? v===o : (v||[]).indexOf(o)>-1;
+      return '<label class="pill"><input type="'+(q.type==='one'?'radio':'checkbox')+'" name="'+q.id+'" value="'+esc(o)+'"'+(on?' checked':'')+'><span>'+esc(o)+'</span></label>'; }).join('') + '</div>';
+  } else if (q.type==='scale') {
+    h += '<div class="scale">'; for (var i=0;i<=10;i++) h += '<label class="pill"><input type="radio" name="'+q.id+'" value="'+i+'"'+(String(v)===String(i)?' checked':'')+'><span>'+i+'</span></label>'; h += '</div><div class="scale-l"><span>sem dor</span><span>pior dor imaginável</span></div>';
+  } else {
+    h += '<div class="field"><input type="'+(q.type==='number'?'text':'text')+'" '+(q.type==='number'?'inputmode="decimal" ':'')+'name="'+q.id+'" value="'+esc(v||'')+'"></div>';
+  }
+  return h + '</div>';
+}
+function render(){
+  var ST = steps(); if (step >= ST.length) step = ST.length-1; var st = ST[step];
+  var h = '<div class="prog"><span>'+(step+1)+' de '+ST.length+'</span><span class="bar"><i style="width:'+Math.round((step+1)/ST.length*100)+'%"></i></span></div>';
+  h += '<h3 class="st-title">'+esc(st.t)+'</h3>';
+  if (st.contato) {
+    h += '<p class="fq">Caso tenha interesse, deixe os seus dados para que a equipe da '+esc(C.curto)+' entre em contato e apresente as opções de avaliação na clínica.</p>';
+    h += '<div class="halves"><div class="field"><label for="f_nome">Seu nome</label><input id="f_nome" name="nome" autocomplete="name" value="'+esc(a.nome||'')+'"></div>' +
+         '<div class="field"><label for="f_whats">WhatsApp com DDD</label><input id="f_whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(a.whats||'')+'"></div></div>';
+    h += qHtml({ id:'horario', t:'Melhor horário para falarmos', type:'one', o:['Manhã','Tarde','Noite'] });
+    h += '<label class="consent"><input type="checkbox" name="ok"'+(a.ok?' checked':'')+'><span>'+esc(C.autoriza)+'</span></label>';
+  } else {
+    st.q.filter(vis).forEach(function(q){
+      if (q.half) return;
+      h += qHtml(q);
+    });
+    var halves = st.q.filter(function(q){ return q.half && vis(q); });
+    if (halves.length) h += '<div class="halves">' + halves.map(function(q){ return '<div class="field"><label>'+esc(q.t)+'</label><input name="'+q.id+'" inputmode="decimal" value="'+esc(a[q.id]||'')+'"></div>'; }).join('') + '</div>';
+  }
+  h += '<p class="err" id="qerr" hidden></p>';
+  h += '<div class="nav">'+(step>0?'<button type="button" class="btn ghost" id="qb">Voltar</button>':'')+'<button type="button" class="btn" id="qn">'+(st.contato?'Enviar minhas respostas':'Continuar')+'</button></div>';
+  box.innerHTML = h;
+  box.querySelectorAll('input').forEach(function(el){
+    el.addEventListener(el.type==='text'||el.type==='tel'?'input':'change', function(){
+      var n = el.name;
+      if (el.type==='checkbox' && n!=='ok') {
+        var arr = [].slice.call(box.querySelectorAll('input[name="'+n+'"]:checked')).map(function(x){return x.value;});
+        var ex = /^(Nenhuma|Nenhum|Nenhuma dessas opções|Nunca tentei|Não atrapalha|Não sei informar)$/;
+        if (ex.test(el.value) && el.checked) { arr=[el.value]; } else if (el.checked) { arr = arr.filter(function(x){ return !ex.test(x); }); }
+        box.querySelectorAll('input[name="'+n+'"]').forEach(function(x){ x.checked = arr.indexOf(x.value)>-1; });
+        a[n] = arr;
+      } else if (n==='ok') a.ok = el.checked;
+      else a[n] = el.value;
+      save();
+      if (el.type==='radio' && steps()[step].q && steps()[step].q.some(function(q){ return q.show; })) { var y = window.scrollY; render(); window.scrollTo(0,y); }
+    });
+  });
+  var qb = document.getElementById('qb'); if (qb) qb.onclick = function(){ step--; save(); render(); top(); };
+  document.getElementById('qn').onclick = next;
+}
+function top(){ document.getElementById('pesquisa').scrollIntoView({ behavior:'smooth' }); }
+function err(m){ var e=document.getElementById('qerr'); e.textContent=m; e.hidden=false; }
+function next(){
+  var ST = steps(), st = ST[step];
+  if (!st.contato) {
+    var miss = st.q.filter(function(q){ return vis(q) && q.req && !(a[q.id]&&a[q.id].length); });
+    if (miss.length) return err('Marque pelo menos uma opção para continuar.');
+    step++; save(); render(); top(); return;
+  }
+  var nome=(a.nome||'').trim(), w=(a.whats||'').replace(/\D/g,'');
+  if (nome.length<2) return err('Escreva o seu nome.');
+  if (w.length<10) return err('Confira o WhatsApp com DDD.');
+  if (!a.ok) return err('Para enviar, marque a autorização de contato.');
+  send();
+}
+function send(){
+  var b = document.getElementById('qn'); b.disabled = true; b.textContent = 'Enviando...';
+  var ev = function(x){ try { return (new Function('a', 'return ('+x+');'))(a); } catch(e){ return ''; } };
+  var resp = [];
+  C.steps.forEach(function(st){ if (!vis(st)) return; st.q.forEach(function(q){ if (!vis(q)) return; var v=a[q.id]; if (v==null||v===''||(Array.isArray(v)&&!v.length)) return; resp.push([q.c, Array.isArray(v)? v.join(', ') : String(v)]); }); });
+  var p = new URLSearchParams(location.search), origem = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','origem'].forEach(function(k){ if (p.get(k)) origem[k]=p.get(k); });
+  var lead = { key:C.writeKey, aba:C.aba, pagina:C.slug, nome:(a.nome||'').trim(), whatsapp:(a.whats||'').trim(), horario:a.horario||'',
+    prioridade: ev(C.prio), interesse: ev(C.interesse), alerta: ev(C.alerta), respostas: resp, origem: origem };
+  var done = function(){ try { localStorage.removeItem(KEY); } catch(e){} thanks(lead); };
+  if (!C.endpointUrl) { console.log('MODO TESTE', JSON.stringify(lead)); window.__l=lead; done(); return; }
+  fetch(C.endpointUrl, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(lead) })
+    .then(done).catch(function(){ b.disabled=false; b.textContent='Tentar de novo'; err('Não conseguimos enviar agora. Confira a internet e tente de novo.'); });
+}
+function thanks(lead){
+  var first = lead.nome.split(/\s+/)[0];
+  var txt = 'Olá! Sou '+lead.nome+' e respondi a pesquisa da '+C.nome+'. Gostaria de agendar uma avaliação.';
+  box.innerHTML = (C.endpointUrl?'':'<p class="testmode">Modo de teste: nada foi enviado.</p>') +
+    '<p class="kicker">Pedido recebido</p><h3 class="st-title">Obrigada, '+esc(first)+'.</h3>' +
+    '<p class="fq" style="font-size:17px">A equipe da '+esc(C.curto)+' chama você no WhatsApp'+(lead.horario?' no período da '+esc(lead.horario.toLowerCase()):'')+', em até 1 dia útil, para apresentar as opções de avaliação.</p>' +
+    '<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/'+C.whatsapp+'?text='+encodeURIComponent(txt)+'">Adiantar pelo WhatsApp</a>';
+  top();
+}
+render();
+})();
+</script>
+</body>
+</html>
