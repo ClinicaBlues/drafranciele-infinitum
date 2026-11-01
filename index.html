@@ -301,6 +301,8 @@ function render(){
     h += '<p class="fq">Caso tenha interesse, deixe os seus dados para que a equipe da '+esc(C.curto)+' entre em contato e apresente as opções de avaliação na clínica.</p>';
     h += '<div class="halves"><div class="field"><label for="f_nome">Seu nome</label><input id="f_nome" name="nome" autocomplete="name" value="'+esc(a.nome||'')+'"></div>' +
          '<div class="field"><label for="f_whats">WhatsApp com DDD</label><input id="f_whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" value="'+esc(a.whats||'')+'"></div></div>';
+    h += '<div class="halves"><div class="field"><label for="f_prof">Profissão ou ocupação</label><input id="f_prof" name="prof" autocomplete="organization-title" placeholder="Ex.: professora, empresária, aposentada" value="'+esc(a.prof||'')+'"></div>' +
+         '<div class="field"><label for="f_insta">@ do Instagram <span style="font-weight:400;opacity:.7">(opcional)</span></label><input id="f_insta" name="insta" autocapitalize="off" autocorrect="off" placeholder="@seuperfil" value="'+esc(a.insta||'')+'"></div></div>';
     h += qHtml({ id:'horario', t:'Melhor horário para falarmos', type:'one', o:['Manhã','Tarde','Noite'] });
     h += '<label class="consent"><input type="checkbox" name="ok"'+(a.ok?' checked':'')+'><span>'+esc(C.autoriza)+'</span></label>';
   } else {
@@ -343,6 +345,7 @@ function next(){
   }
   var nome=(a.nome||'').trim(), w=(a.whats||'').replace(/\D/g,'');
   if (nome.length<2) return err('Escreva o seu nome.');
+  if ((a.prof||'').trim().length<2) return err('Conte qual é a sua profissão ou ocupação.');
   if (w.length<10) return err('Confira o WhatsApp com DDD.');
   if (!a.ok) return err('Para enviar, marque a autorização de contato.');
   send();
@@ -350,7 +353,8 @@ function next(){
 function send(){
   var b = document.getElementById('qn'); b.disabled = true; b.textContent = 'Enviando...';
   var ev = function(x){ try { return (new Function('a', 'return ('+x+');'))(a); } catch(e){ return ''; } };
-  var resp = [];
+  var resp = [['Profissão', (a.prof||'').trim()]];
+  var ig = (a.insta||'').trim().replace(/^(https?:\/\/)?(www\.)?instagram\.com\//i,'').replace(/\/.*$/,''); if (ig) resp.push(['Instagram', ig.charAt(0)==='@'? ig : '@'+ig]);
   C.steps.forEach(function(st){ if (!vis(st)) return; st.q.forEach(function(q){ if (!vis(q)) return; var v=a[q.id]; if (v==null||v===''||(Array.isArray(v)&&!v.length)) return; resp.push([q.c, Array.isArray(v)? v.join(', ') : String(v)]); }); });
   var p = new URLSearchParams(location.search), origem = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','origem'].forEach(function(k){ if (p.get(k)) origem[k]=p.get(k); });
